@@ -52,7 +52,8 @@ void	five(t_stacks s)
 	s.a = find_ind(s.a, 1, 5);
 	s = pb(s);
 	three(s, 2);
-	ft_printf("pa\npa\n");
+	s = pa(s);
+	s = pa(s);
 }
 
 void	four(t_stacks s)
@@ -61,7 +62,7 @@ void	four(t_stacks s)
 	is_sorted(s.a, 4);
 	s = pb(s);
 	three(s, 1);
-	ft_printf("pa\n");
+	s = pa(s);
 }
 
 void	small(t_stacks s, int n)
