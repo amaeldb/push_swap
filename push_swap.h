@@ -6,7 +6,7 @@
 /*   By: ade-beta <ade-beta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 11:51:38 by ade-beta          #+#    #+#             */
-/*   Updated: 2022/05/05 11:56:48 by ade-beta         ###   ########.fr       */
+/*   Updated: 2022/05/05 13:37:51 by ade-beta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,9 @@ t_stack		*sb(t_stack *b, int i);
 t_stack		*rb(t_stack *b, int i);
 t_stack		*rrb(t_stack *b, int i);
 t_stacks	pb(t_stacks stacks);
-t_stacks    ss(t_stacks stacks);
-t_stacks    rr(t_stacks stacks);
-t_stacks    rrr(t_stacks stacks);
+t_stacks	ss(t_stacks stacks);
+t_stacks	rr(t_stacks stacks);
+t_stacks	rrr(t_stacks stacks);
 
 void		small(t_stacks s, int n);
 void		radix(t_stacks s, int n);
