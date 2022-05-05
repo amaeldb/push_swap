@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   move_a.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ade-beta <ade-beta@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/05 11:51:24 by ade-beta          #+#    #+#             */
+/*   Updated: 2022/05/05 11:54:00 by ade-beta         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 t_stack	*sa(t_stack *a, int i)
@@ -48,7 +60,7 @@ t_stacks	pa(t_stacks stacks)
 {
 	t_stack	*ph;
 
-	if(stacks.b)
+	if (stacks.b)
 	{
 		ph = stacks.b->next;
 		stacks.b->next = stacks.a;

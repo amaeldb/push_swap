@@ -1,19 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   move_b.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ade-beta <ade-beta@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/05 11:51:31 by ade-beta          #+#    #+#             */
+/*   Updated: 2022/05/05 11:58:06 by ade-beta         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 t_stack	*sb(t_stack *b, int i)
 {
 	t_stack	*ph;
 
-	// ph = a->next->next;
-	// a->next->prev = NULL;
-	// a->next->next = a;
-	// a->prev = a->next;
-	// a->next = ph;
-	// a = a->prev;
-	// return (a);
-		ph = b->next;
-		b->next = ph->next;
-		ph->next = b;
+	ph = b->next;
+	b->next = ph->next;
+	ph->next = b;
 	if (i)
 		ft_printf("sb\n");
 	return (ph);
@@ -55,7 +60,7 @@ t_stacks	pb(t_stacks stacks)
 {
 	t_stack	*ph;
 
-	if(stacks.a)
+	if (stacks.a)
 	{
 		ph = stacks.a->next;
 		stacks.a->next = stacks.b;

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ade-beta <ade-beta@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/05 11:51:38 by ade-beta          #+#    #+#             */
+/*   Updated: 2022/05/05 11:56:48 by ade-beta         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
@@ -18,7 +30,7 @@ typedef struct s_stacks
 
 t_stack		*make_a(char **str, int n);
 void		free_all(t_stack *a);
-int			is_sorted(t_stack *a, int i/*, int n*/);
+int			is_sorted(t_stack *a, int i);
 
 t_stack		*sa(t_stack *a, int i);
 t_stack		*ra(t_stack *a, int i);

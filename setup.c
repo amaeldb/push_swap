@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   setup.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ade-beta <ade-beta@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/05 11:51:44 by ade-beta          #+#    #+#             */
+/*   Updated: 2022/05/05 12:11:15 by ade-beta         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 int	*sort_str(char **str, int n)
@@ -5,10 +17,9 @@ int	*sort_str(char **str, int n)
 	int	*ret;
 	int	i;
 	int	j;
-	int	ph;
 
 	i = -1;
-	ret = malloc(sizeof(int) * n);
+	ret = malloc(sizeof(int) * (n + 1));
 	if (!ret)
 		exit(0);
 	while (++i < n)
@@ -18,12 +29,14 @@ int	*sort_str(char **str, int n)
 	{
 		j = i;
 		while (++j < n)
+		{
 			if (ret[i] > ret[j])
 			{
-				ph = ret[i];
+				ret[n] = ret[i];
 				ret[i] = ret[j];
-				ret[j] = ph;
+				ret[j] = ret[n];
 			}
+		}
 	}
 	return (ret);
 }
@@ -39,9 +52,8 @@ int	get_ind(int val, int *sorted, int n)
 	return (i);
 }
 
-void	set_a(t_stack *a, /*t_stack *pre,*/ int *sorted, int n)
+void	set_a(t_stack *a, int *sorted, int n)
 {
-	//a->prev = pre;
 	a->next = NULL;
 	a->ind = get_ind(a->value, sorted, n);
 }
@@ -64,7 +76,7 @@ t_stack	*make_a(char **str, int n)
 		if (!a)
 			free_all(ret);
 		a->value = ft_atoi(str[i]);
-		set_a(a, /*pre,*/ sorted, n);
+		set_a(a, sorted, n);
 		if (pre)
 			pre->next = a;
 		else

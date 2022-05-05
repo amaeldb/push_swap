@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   small_sort.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ade-beta <ade-beta@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/05 11:51:49 by ade-beta          #+#    #+#             */
+/*   Updated: 2022/05/05 12:11:42 by ade-beta         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 t_stack	*find_ind(t_stack *a, int ind, int n)
 {
-	int	i;
+	int		i;
 	t_stack	*ph;
 
 	i = 1;
@@ -35,6 +47,7 @@ void	three(t_stacks s, int i)
 void	five(t_stacks s)
 {
 	s.a = find_ind(s.a, 0, 5);
+	is_sorted(s.a, 5);
 	s = pb(s);
 	s.a = find_ind(s.a, 1, 5);
 	s = pb(s);
@@ -45,6 +58,7 @@ void	five(t_stacks s)
 void	four(t_stacks s)
 {
 	s.a = find_ind(s.a, 0, 4);
+	is_sorted(s.a, 4);
 	s = pb(s);
 	three(s, 1);
 	ft_printf("pa\n");
@@ -57,7 +71,6 @@ void	small(t_stacks s, int n)
 	else if (n == 3)
 		three(s, 0);
 	else if (n == 4)
-		//radix(s, n);
 		four(s);
 	else if (n == 5)
 		five(s);
